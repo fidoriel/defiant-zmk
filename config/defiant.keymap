@@ -119,42 +119,48 @@
         de_q: de_q {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp RA(Q)>; // Q, @
+            bindings = <&kp Q>, <&macro_at>;
             mods = <(MOD_RALT)>;
         };
 
         de_e: de_e {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp RA(E)>; // E, €
+            bindings = <&kp E>, <&macro_eur>;
             mods = <(MOD_RALT)>;
         };
 
         de_a: de_a {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp RA(A)>; // A, ä
+            bindings = <&kp A>, <&macro_ae>;
             mods = <(MOD_RALT)>;
         };
 
         de_o: de_o {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp O>, <&kp RA(O)>; // O, ö
+            bindings = <&kp O>, <&macro_oe>;
             mods = <(MOD_RALT)>;
         };
 
         de_u: de_u {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp U>, <&kp RA(U)>; // U, ü
+            bindings = <&kp U>, <&macro_ue>;
             mods = <(MOD_RALT)>;
         };
 
         de_s: de_s {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp S>, <&kp RA(S)>; // S, ß
+            bindings = <&kp S>, <&macro_sz>;
+            mods = <(MOD_RALT)>;
+        };
+        de_p: de_p {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&macro_pound>;
             mods = <(MOD_RALT)>;
         };
     };
@@ -179,6 +185,41 @@ macros {
         #binding-cells = <0>;
         bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
     };
+    macro_at: macro_at {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u0040>; // '@'
+    };
+    macro_eur: macro_eur {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u20AC>; // '€'
+    };
+    macro_ae: macro_ae {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u00E4>; // 'ä'
+    };
+    macro_oe: macro_oe {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u00F6>; // 'ö'
+    };
+    macro_ue: macro_ue {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u00FC>; // 'ü'
+    };
+    macro_sz: macro_sz {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u00DF>; // 'ß'
+    };
+    macro_pound: macro_pound {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&u00A3>; // '£'
+    };
 };
 
 keymap {
@@ -186,7 +227,7 @@ keymap {
 
     default_layer {
         bindings = <
-&de_q      &kp W    &de_e    &kp R      &kp T                                            &kp Z       &de_u    &kp I      &de_o    &kp P
+&de_q      &kp W    &de_e    &kp R      &kp T                                            &kp Z       &de_u    &kp I      &de_o    &de_p
 &de_a      &de_s    &kp D    &kp F      &kp G       &mo 2             &mo 1              &kp H       &kp J    &kp K      &kp L    &kp SEMI
 &kp Y      &kp X    &kp C    &kp V      &kp B       &kp LCTRL         &kp RCTRL          &kp N       &kp M    &kp COMMA  &kp DOT  &kp FSLH
 &kp LCTRL  &kp DEL  &kp TAB  &kp SPACE  &kp LSHIFT                                       &kp RSHIFT  &kp RET  &kp BSPC   &kp ESC  &kp RIGHT_ALT
@@ -205,7 +246,7 @@ second {
     function {
         bindings = <
 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                          &kp F6      &kp F7     &kp F8     &kp F9     &kp F10
-&kp F11    &kp F12    &code_block&none      &none      &trans    &trans     &none       &none      &kp UP     &none      &none
+&kp F11    &kp F12    &code_block&PSCR      &none      &trans    &trans     &none       &none      &kp UP     &none      &none
 &bt BT_CLR &bt BT_PRV &bt BT_NXT &none      &none      &trans    &trans     &kp HOME    &kp LEFT   &kp DOWN   &kp RIGHT  &kp END
 &trans     &trans     &trans     &trans     &trans                           &trans      &trans     &trans     &trans     &trans
         >;
