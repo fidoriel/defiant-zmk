@@ -54,6 +54,14 @@
             bindings = <&kp DE_P>, <&kp DE_POUND>; // S, ß
             mods = <(MOD_RALT)>;
         };
+
+        de_m: de_m {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_M>, <&kp DE_MU>; // M, µ
+            mods = <(MOD_RALT)>;
+        };
+
     };
 
     combos {
@@ -83,19 +91,19 @@ keymap {
 
     default_layer {
         bindings = <
-&de_q      &kp DE_W &de_e    &kp DE_R      &kp DE_T                                      &kp DE_Z    &de_u    &kp DE_I      &de_o    &de_p
-&de_a      &de_s    &kp DE_D &kp DE_F      &kp DE_G    &mo 2             &mo 1           &kp DE_H    &kp DE_J &kp DE_K      &kp DE_L &kp SEMI
-&kp DE_Y   &kp DE_X &kp DE_C &kp DE_V      &kp DE_B    &kp LCTRL         &kp RCTRL       &kp DE_N    &kp DE_M &kp DE_COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &kp DEL  &kp TAB  &kp SPACE     &kp LSHIFT                                    &kp RSHIFT  &kp RET  &kp BSPC      &kp ESC  &kp RIGHT_ALT
+&de_q      &kp DE_W &de_e    &kp DE_R      &kp DE_T                                      &kp DE_Z    &de_u    &kp DE_I      &de_o      &de_p
+&de_a      &de_s    &kp DE_D &kp DE_F      &kp DE_G    &mo 2             &mo 1           &kp DE_H    &kp DE_J &kp DE_K      &kp DE_L   &kp DE_SEMI
+&kp DE_Y   &kp DE_X &kp DE_C &kp DE_V      &kp DE_B    &kp LCTRL         &kp RCTRL       &kp DE_N    &kp DE_M &kp DE_COMMA  &kp DE_DOT &kp DE_FSLH
+&kp LCTRL  &kp DEL  &kp TAB  &kp SPACE     &kp LSHIFT                                    &kp RSHIFT  &kp RET  &kp BSPC      &kp ESC    &kp RIGHT_ALT
         >;
     };
 
 second {
     bindings = <
-&kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5                     &kp DE_N6   &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0
-&kp PLUS   &kp MINUS  &kp STAR   &kp FSLH   &kp PRCNT  &trans    &trans   &kp LBRC    &kp RBRC   &kp LT     &kp GT     &kp SQT
-&kp TILDE  &kp GRAVE  &kp AMPS   &kp EQUAL  &kp UNDER  &trans    &trans   &kp LBKT    &kp RBKT   &kp SEMI   &kp COLON  &kp BSLH
-&trans     &trans     &trans     &trans     &trans                        &trans      &trans     &trans     &trans     &trans
+&kp DE_N1    &kp DE_N2    &kp DE_N3    &kp DE_N4    &kp DE_N5                      &kp DE_N6   &kp DE_N7   &kp DE_N8   &kp DE_N9    &kp DE_N0
+&kp DE_PLUS  &kp DE_MINUS &kp DE_ASTRK &kp DE_CARET &kp DE_DEG   &trans   &trans   &kp DE_LBRC &kp DE_RBRC &kp DE_LT   &kp DE_GT    &kp DE_SQT
+&kp DE_TILDE &kp DE_GRAVE &kp DE_AMPS  &kp DE_EQUAL &kp DE_UNDER &trans   &trans   &kp DE_LBKT &kp DE_RBKT &kp DE_SEMI &kp DE_COLON &kp DE_BSLH
+&trans       &trans       &trans       &trans       &trans                         &trans      &trans      &trans      &trans       &trans
     >;
 };
 
