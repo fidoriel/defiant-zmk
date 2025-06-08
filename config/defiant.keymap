@@ -6,157 +6,52 @@
 
 / {
     behaviors {
-        de_1: de_1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp EXCL>; // 1, !
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        
-        de_2: de_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LS(N2)>; // 2, "
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        
-        de_3: de_3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp LS(N3)>; // 3, §
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        de_3_alt: de_3_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp HASH>; // 3, #
-            mods = <(MOD_RALT)>;
-        };
-        
-        de_4: de_4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp DOLLAR>; // 4, $
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        
-        de_5: de_5 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N5>, <&kp PERCENT>; // 5, %
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        de_6: de_6 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp AMPS>; // 6, &
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        de_6_alt: de_6_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp CARET>; // 6, ^
-            mods = <(MOD_RALT)>;
-        };
-
-        de_7: de_7 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp FSLH>; // 7, /
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        de_7_alt: de_7_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp LBRC>; // 7, {
-            mods = <(MOD_RALT)>;
-        };
-
-        de_8: de_8 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp LPAR>; // 8, (
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        de_8_alt: de_8_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp LBKT>; // 8, [
-            mods = <(MOD_RALT)>;
-        };
-
-        de_9: de_9 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp RPAR>; // 9, )
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        de_9_alt: de_9_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp RBKT>; // 9, ]
-            mods = <(MOD_RALT)>;
-        };
-
-        de_0: de_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp EQUAL>; // 0, =
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        
-        de_0_alt: de_0_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp RBRC>; // 0, }
-            mods = <(MOD_RALT)>;
-        };
-
         de_q: de_q {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp RA(Q)>; // Q, @
+            bindings = <&kp DE_Q>, <&kp DE_AT>; // Q, @
             mods = <(MOD_RALT)>;
         };
 
         de_e: de_e {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp RA(E)>; // E, €
+            bindings = <&kp DE_E>, <&kp DE_EURO>; // E, €
             mods = <(MOD_RALT)>;
         };
 
         de_a: de_a {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp RA(A)>; // A, ä
+            bindings = <&kp DE_A>, <&kp DE_AE>; // A, ä
             mods = <(MOD_RALT)>;
         };
 
         de_o: de_o {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp O>, <&kp RA(O)>; // O, ö
+            bindings = <&kp DE_O>, <&kp DE_OE>; // O, ö
             mods = <(MOD_RALT)>;
         };
 
         de_u: de_u {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp U>, <&kp RA(U)>; // U, ü
+            bindings = <&kp DE_U>, <&kp DE_UE>; // U, ü
             mods = <(MOD_RALT)>;
         };
 
         de_s: de_s {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp S>, <&kp RA(S)>; // S, ß
+            bindings = <&kp DE_S>, <&kp DE_SZ>; // S, ß
+            mods = <(MOD_RALT)>;
+        };
+
+        de_p: de_p {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_P>, <&kp DE_POUND>; // S, ß
             mods = <(MOD_RALT)>;
         };
     };
@@ -188,16 +83,16 @@ keymap {
 
     default_layer {
         bindings = <
-&de_q      &kp W    &de_e    &kp R      &kp T                                            &kp Z       &de_u    &kp I      &de_o    &kp P
-&de_a      &de_s    &kp D    &kp F      &kp G       &mo 2             &mo 1              &kp H       &kp J    &kp K      &kp L    &kp SEMI
-&kp Y      &kp X    &kp C    &kp V      &kp B       &kp LCTRL         &kp RCTRL          &kp N       &kp M    &kp COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &kp DEL  &kp TAB  &kp SPACE  &kp LSHIFT                                       &kp RSHIFT  &kp RET  &kp BSPC   &kp ESC  &kp RIGHT_ALT
+&de_q      &kp DE_W &de_e    &kp DE_R      &kp DE_T                                      &kp DE_Z    &de_u    &kp DE_I      &de_o    &de_p
+&de_a      &de_s    &kp DE_D &kp DE_F      &kp DE_G    &mo 2             &mo 1           &kp DE_H    &kp DE_J &kp DE_K      &kp DE_L &kp SEMI
+&kp DE_Y   &kp DE_X &kp DE_C &kp DE_V      &kp DE_B    &kp LCTRL         &kp RCTRL       &kp DE_N    &kp DE_M &kp DE_COMMA  &kp DOT  &kp FSLH
+&kp LCTRL  &kp DEL  &kp TAB  &kp SPACE  &kp LSHIFT                                       &kp RSHIFT  &kp RET  &kp BSPC      &kp ESC  &kp RIGHT_ALT
         >;
     };
 
 second {
     bindings = <
-&de_1      &de_2      &de_3      &de_4      &de_5                          &de_6       &de_7_alt  &de_8_alt  &de_9_alt  &de_0_alt
+&DE_N1     &DE_N2     &DE_N3     &DE_N4     &DE_N5                        &DE_N6      &DE_N7     &DE_N8     &DE_N9     &DE_N0
 &kp PLUS   &kp MINUS  &kp STAR   &kp FSLH   &kp PRCNT  &trans    &trans   &kp LBRC    &kp RBRC   &kp LT     &kp GT     &kp SQT
 &kp TILDE  &kp GRAVE  &kp AMPS   &kp EQUAL  &kp UNDER  &trans    &trans   &kp LBKT    &kp RBKT   &kp SEMI   &kp COLON  &kp BSLH
 &trans     &trans     &trans     &trans     &trans                         &trans      &trans     &trans     &trans     &trans
@@ -207,7 +102,7 @@ second {
     function {
         bindings = <
 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                          &kp F6      &kp F7     &kp F8     &kp F9     &kp F10
-&kp F11    &kp F12    &code_block&none      &none      &trans    &trans     &none       &none      &kp UP     &none      &none
+&kp F11    &kp F12    &code_block&DE_HASH   &none      &trans    &trans     &none       &none      &kp UP     &none      &none
 &bt BT_CLR &bt BT_PRV &bt BT_NXT &none      &none      &trans    &trans     &kp HOME    &kp LEFT   &kp DOWN   &kp RIGHT  &kp END
 &trans     &trans     &trans     &trans     &trans                           &trans      &trans     &trans     &trans     &trans
         >;
