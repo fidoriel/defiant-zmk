@@ -23,21 +23,21 @@
         de_a: de_a {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DE_A>, <&kp DE_AE>; // A, ä
+            bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>; // A, ä
             mods = <(MOD_RALT)>;
         };
 
         de_o: de_o {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DE_O>, <&kp DE_OE>; // O, ö
+            bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>; // O, ö
             mods = <(MOD_RALT)>;
         };
 
         de_u: de_u {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DE_U>, <&kp DE_UE>; // U, ü
+            bindings = <&kp DE_U>, <&kp DE_U_UMLAUT>; // U, ü
             mods = <(MOD_RALT)>;
         };
 
