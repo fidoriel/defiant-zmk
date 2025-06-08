@@ -185,40 +185,47 @@ macros {
         #binding-cells = <0>;
         bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
     };
+
     macro_at: macro_at {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u0040>; // '@'
+        bindings = <&macro_unicode 0x0040>; // '@'
     };
+
     macro_eur: macro_eur {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u20AC>; // '€'
+        bindings = <&macro_unicode 0x20AC>; // '€'
     };
+
     macro_ae: macro_ae {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u00E4>; // 'ä'
+        bindings = <&macro_unicode 0x00E4>; // 'ä'
     };
+
     macro_oe: macro_oe {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u00F6>; // 'ö'
+        bindings = <&macro_unicode 0x00F6>; // 'ö'
     };
+
     macro_ue: macro_ue {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u00FC>; // 'ü'
+        bindings = <&macro_unicode 0x00FC>; // 'ü'
     };
+
     macro_sz: macro_sz {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u00DF>; // 'ß'
+        bindings = <&macro_unicode 0x00DF>; // 'ß'
     };
+
     macro_pound: macro_pound {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&u00A3>; // '£'
+        bindings = <&macro_unicode 0x00A3>; // '£'
     };
 };
 
