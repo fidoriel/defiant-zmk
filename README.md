@@ -3,3 +3,4 @@
 Use `bluetuith` to pair with Linux.
 Right half is leading half.
 Builds reset firmware by default.
+Download from ci artifact.
