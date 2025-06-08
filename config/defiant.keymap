@@ -86,16 +86,16 @@ keymap {
 &de_q      &kp DE_W &de_e    &kp DE_R      &kp DE_T                                      &kp DE_Z    &de_u    &kp DE_I      &de_o    &de_p
 &de_a      &de_s    &kp DE_D &kp DE_F      &kp DE_G    &mo 2             &mo 1           &kp DE_H    &kp DE_J &kp DE_K      &kp DE_L &kp SEMI
 &kp DE_Y   &kp DE_X &kp DE_C &kp DE_V      &kp DE_B    &kp LCTRL         &kp RCTRL       &kp DE_N    &kp DE_M &kp DE_COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &kp DEL  &kp TAB  &kp SPACE  &kp LSHIFT                                       &kp RSHIFT  &kp RET  &kp BSPC      &kp ESC  &kp RIGHT_ALT
+&kp LCTRL  &kp DEL  &kp TAB  &kp SPACE     &kp LSHIFT                                    &kp RSHIFT  &kp RET  &kp BSPC      &kp ESC  &kp RIGHT_ALT
         >;
     };
 
 second {
     bindings = <
-&DE_N1     &DE_N2     &DE_N3     &DE_N4     &DE_N5                        &DE_N6      &DE_N7     &DE_N8     &DE_N9     &DE_N0
+&kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5                     &kp DE_N6   &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0
 &kp PLUS   &kp MINUS  &kp STAR   &kp FSLH   &kp PRCNT  &trans    &trans   &kp LBRC    &kp RBRC   &kp LT     &kp GT     &kp SQT
 &kp TILDE  &kp GRAVE  &kp AMPS   &kp EQUAL  &kp UNDER  &trans    &trans   &kp LBKT    &kp RBKT   &kp SEMI   &kp COLON  &kp BSLH
-&trans     &trans     &trans     &trans     &trans                         &trans      &trans     &trans     &trans     &trans
+&trans     &trans     &trans     &trans     &trans                        &trans      &trans     &trans     &trans     &trans
     >;
 };
 
@@ -104,7 +104,7 @@ second {
 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                          &kp F6      &kp F7     &kp F8     &kp F9     &kp F10
 &kp F11    &kp F12    &code_block&DE_HASH   &none      &trans    &trans     &none       &none      &kp UP     &none      &none
 &bt BT_CLR &bt BT_PRV &bt BT_NXT &none      &none      &trans    &trans     &kp HOME    &kp LEFT   &kp DOWN   &kp RIGHT  &kp END
-&trans     &trans     &trans     &trans     &trans                           &trans      &trans     &trans     &trans     &trans
+&trans     &trans     &trans     &trans     &trans                          &trans      &trans     &trans     &trans     &trans
         >;
     };
 };
